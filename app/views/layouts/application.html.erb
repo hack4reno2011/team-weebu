@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pickup Basketball | <%= @title %></title>
+ <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+  <%= stylesheet_link_tag 'custom', :media => 'screen' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+    <div class="container">
+      <header>
+        <%= image_tag("logo.png", :alt => "Sample App", :class => "round") %>
+        <nav class="round">
+          <ul>
+            <a href="/pages/signin">Sign In</a>
+            <a href="/users/new">Register</a>
+          </ul>
+        </nav>
+      </header>
+      <section class="round">
+        <table class="table">
+          <tr>
+            <td class="page">
+              <%= yield %>
+            </td>
+            <td class="links">
+                <ul class="round">
+                    <a href="/pages/home">Home</a> <br/>
+                    <a href="/pages/locations">Locations</a> <br/>
+                    <a href="/pages/create">Create Game</a>
+                </ul>
+            </td>
+          </tr>
+        </table>
+      </section>
+    </div>
+
+</body>
+</html>
