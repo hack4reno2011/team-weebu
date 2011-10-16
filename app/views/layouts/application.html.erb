@@ -25,6 +25,9 @@
         <table class="table">
           <tr>
             <td class="page">
+                <% flash.each do |key, value| %>
+                    <div class="flash <%= key %>"><%= value %></div>
+                <% end %>
               <%= yield %>
             </td>
             <td class="links">
