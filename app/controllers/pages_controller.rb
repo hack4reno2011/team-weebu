@@ -3,9 +3,6 @@ class PagesController < ApplicationController
     @title = "Home"
   end
 
-def signin
-    @title = "Sign In"
-  end
 
   def locations
     @title = "Locations"
