@@ -122,3 +122,7 @@ div.field, div.actions {
 .flash {
     color: green;
 }
+
+.error {
+    color: red;
+}

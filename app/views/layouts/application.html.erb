@@ -16,7 +16,11 @@
         <%= image_tag("logo.png", :alt => "Sample App", :class => "round") %>
         <nav class="round">
           <ul>
-            <a href="/sessions/new">Sign In</a>
+            <% if signed_in? %>
+                <%= link_to "Sign out", "/sessions/destroy"%>
+            <% else %>
+                <li><%= link_to "Sign in", "/sessions/new" %></li>
+            <% end %>
             <a href="/users/new">Register</a>
           </ul>
         </nav>
