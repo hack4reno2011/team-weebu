@@ -13,6 +13,10 @@ BBall::Application.routes.draw do
 
   get "sessions/new"
 
+  match "games/join", :to=> 'games#join'
+
+  get "games/view"
+
   match "users/new", :to => 'users#new'
 
   get "pages/home"
