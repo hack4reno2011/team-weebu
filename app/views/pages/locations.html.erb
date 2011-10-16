@@ -1,4 +1,4 @@
-<h1>Pages#locations</h1>
+<h1>Locations</h1>
 
 <% content_for(:head) do  %>
 <style type="text/css">
@@ -45,7 +45,7 @@
 <% loc = Location.find(:all) %>
 
 <% loc.each do |curr_loc| %>
-<h2><%= curr_loc.name %></h2>
+<%= curr_loc.name %>
 <%= curr_loc.address %>
 <br>
 <% curr_loc.lat %>
