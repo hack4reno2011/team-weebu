@@ -1,0 +1,16 @@
+<h1>Create Game</h1>
+
+<%= form_for(@game) do |f| %>
+  <div class="field">
+    <%= f.label :location %>
+    <%= select("game", "location", Location.all.collect {|p| [p.name]}, {:prompt => 'Select Location'}) %>
+  </div>
+  <div class="field">
+    <%= f.label :datetime %>
+    <%= f.text_field :datetime %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Create" %>
+  </div>
+
+<% end %>
