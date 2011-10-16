@@ -7,7 +7,7 @@
   </div>
   <div class="field">
     <%= f.label :datetime %>
-    <%= f.text_field :datetime %>
+    <%= select("game", "datetime", GamesController::TIMES) %>
   </div>
   <div class="actions">
     <%= f.submit "Create" %>
