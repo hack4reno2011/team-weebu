@@ -11,25 +11,29 @@
 <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
 <script type="text/javascript">
   
-  var map;
+     <% t = Location.find(:first) %>
+      var map;
       $(document).ready(function() {
       var myOptions = { 
        zoom: 14,
-       center: new google.maps.LatLng(39.524, -119.811),
+       center: new google.maps.LatLng(<%= t.long %>, <%= t.lat %>),
        mapTypeId: google.maps.MapTypeId.ROADMAP
        };
 
       temp_canvas = document.getElementById('map_canvas');
        map = new google.maps.Map(document.getElementById('map_canvas'), myOptions);
                                                                     
+
+      <% locs = Location.find(:all) %>
+      <% locs.each do |curr_loc| %>
      var marker = new google.maps.Marker({
-        position: new google.maps.LatLng(39.524, -119.811),
-        title: "You are here"
+        position: new google.maps.LatLng(<%= curr_loc.long %>, <%= curr_loc.lat %>),
+        title: "<%= curr_loc.name %>" 
      });
 
      marker.setMap(map);
+     <% end %>
 
-    $('#locs_div').append("THIS!");
     });
 
 </script>
