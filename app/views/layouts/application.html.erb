@@ -21,7 +21,7 @@
             <% if signed_in? %>
                 <%= link_to "Sign out", "/sessions/destroy"%>
             <% else %>
-                <li><%= link_to "Sign in", "/sessions/new" %></li>
+                <%= link_to "Sign in", "/sessions/new" %>
             <% end %>
             <a href="/users/new">Register</a>
           </ul>
@@ -40,7 +40,7 @@
                 <ul class="round">
                     <a href="/pages/home">Home</a> <br/>
                     <a href="/pages/locations">Locations</a> <br/>
-                    <a href="/pages/create">Create Game</a>
+                    <a href="/games/new">Create Game</a>
                 </ul>
             </td>
           </tr>

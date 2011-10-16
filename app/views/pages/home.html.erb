@@ -1,2 +1,19 @@
-<h1>Pages#home</h1>
+<h1>Today's Games</h1>
+
+<table>
+  <tr>
+    <th>Num Players</th>
+    <th>Location</th>
+    <th>Creator</th>
+    <th>Date/Time</th>
+  </tr>
+  <% @games.each do |current_game| %>
+    <tr>
+      <td><%=current_game.numplayers %></td>
+      <td><%=current_game.location %></td>
+      <td><%=current_game.creator %></td>
+      <td><%=current_game.datetime %></td>
+    </tr>
+  <% end %>
+</table>
 

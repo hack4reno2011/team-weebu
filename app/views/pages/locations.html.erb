@@ -14,6 +14,7 @@
      <% t = Location.find(:first) %>
       var map;
       $(document).ready(function() {
+          alert("message");
       var myOptions = { 
        zoom: 14,
        center: new google.maps.LatLng(<%= t.long %>, <%= t.lat %>),
