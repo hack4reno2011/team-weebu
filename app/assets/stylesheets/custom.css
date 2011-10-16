@@ -73,3 +73,7 @@ nav {
   -webkit-border-radius: 10px;
   border-radius:         10px;
 }
+
+div.field, div.actions {
+  margin-bottom: 10px;
+}
