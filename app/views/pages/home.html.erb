@@ -1,20 +1,25 @@
 <h1>Today's Games</h1>
 
-<table>
-  <tr>
+<table style="padding:10px; width:700px; margin:auto; ">
+<!--
+  <tr style="width:700; ">
     <th>Num Players</th>
     <th>Location</th>
     <th>Creator</th>
     <th>Date/Time</th>
   </tr>
+  -->
   <% @games.each do |current_game| %>
-    <tr>
+  <hr />
+    <tr >
+      <div>
       <td><%=current_game.numplayers %></td>
       <td><%=current_game.location %></td>
       <td><%=current_game.creator %></td>
       <td><%=current_game.datetime %></td>
       <td><%=link_to "Join", "/games/join?id=#{current_game.id}" %></td>
       <td><%=link_to "View", "/games/view" %></td>
+      </div>
     </tr>
   <% end %>
 </table>

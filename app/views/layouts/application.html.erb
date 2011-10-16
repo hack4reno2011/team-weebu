@@ -16,40 +16,28 @@
 
     <div class="container">
     
-    <div style="padding: 20px; background-color:#ffffff;">
+    <div style="padding: 20px; background-color:#ffffff; "> 
       <div style="float: left; background-color:#ffffff;">
-        <a href="/pages/home" style="padding-left: 10px; padding-right: 10px;">Today</a> 
-        <a href="/pages/locations" style="padding-left: 10px; padding-right:10px;">Locations</a>
-        <a href="/games/new" style="padding-left:10px; padding-right:10px;">Create Game</a>
+        <a href="/pages/home" style="color: #444; padding-left: 10px; padding-right: 10px;">Today</a> 
+        <a href="/pages/locations" style="color:#444; padding-left: 10px; padding-right:10px;">Locations</a> 
+        <a href="/games/new" style="color:#444;">Create Game</a>
       </div>
-        <div class="login" style="font-family: helvetica; ">
+        <div class="login" style="font-family: helvetica; color:#444; ">
             <% if signed_in? %>
                 <%= link_to "Sign out", "/sessions/destroy"%>
             <% else %>
                 <%= link_to "Sign in", "/sessions/new" %>
             <% end %>
-            <a href="/users/new" style="padding-right:40px; padding-left:20px; ">Register</a>
+            <a href="/users/new" style="padding-right:40px; padding-left:20px; color:#444; ">Register</a>
         </div>
     </div>
-      <header>
-        <%= image_tag("logo.png", :alt => "Sample App", :class => "round", :height => '200') %>
+      <header style="background-color: #ddd; text-align:center;">
+        <%= image_tag("logo.png", :alt => "Sample App", :class => "round", :height => '75') %>
       </header>
-      <section class="round">
-        <table class="table">
-          <tr>
-            <td class="page">
                 <% flash.each do |key, value| %>
-                    <div class="flash <%= key %>"><%= value %></div>
+                    <div style="margin:auto;" class="flash <%= key %>"><%= value %></div>
                 <% end %>
               <%= yield %>
-            </td>
-            <td class="links">
-                <ul class="round">
-                </ul>
-            </td>
-          </tr>
-        </table>
-      </section>
     </div>
 
 </body>

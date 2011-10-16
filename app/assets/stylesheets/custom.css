@@ -1,5 +1,5 @@
 .container {
-  width: 60%;
+  width: 800px;
   margin:0px auto;
   background-color:#fff ;
   min-height: 1000px;
@@ -22,12 +22,25 @@ header img {
   padding: 1em;
 }
 
+tr {
+  margin 5px;
+  height: 50px;
+  background-color: #ddd;
+  border-radius: 3px;
+  -web-kit-border-radius: 3px;
+  -moz-border-radius: 3px;
+}
+
+.tr_row {
+}
+
 .login {
   float: right;
   background-color: white;
   padding: 0px;
   text-align: right;
   margin: 0px;
+  color: #444;
 }
 
 section h1 {
@@ -37,17 +50,17 @@ section h1 {
 /* Links */
 
 a {
-  color: #09c;
+  color: #444;
   text-decoration: none;
 }
 
 a:hover {
-  color: #069;
+  color: #444;
   text-decoration: underline;
 }
 
 a:visited {
-  color: #069;
+  color: #444;
 }
 
 /* Navigation */
@@ -77,7 +90,11 @@ nav {
     width: 20%
 }
 
-.table {
+table {
+  border-style: hidden;
+  padding: 0px;
+  border-collapse: collapse;
+
     width: 100%;
 }
 
