@@ -1,18 +1,18 @@
 <h1>Today's Games</h1>
 
 <table>
-  <tr>
-    <th>Num Players</th>
-    <th>Location</th>
-    <th>Creator</th>
-    <th>Date/Time</th>
+  <tr class="table_header">
+    <th class="table_header_entry">Num Players</th>
+    <th class="table_header_entry">Location</th>
+    <th class="table_header_entry">Creator</th>
+    <th class="table_header_entry">Date/Time</th>
   </tr>
   <% @games.each do |current_game| %>
-    <tr>
+    <tr class="table_row">
       <td><%=current_game.numplayers %></td>
       <td><%=current_game.location %></td>
       <td><%=current_game.creator %></td>
-      <td><%=current_game.datetime %></td>
+      <td><%=current_game.datetime.to_formatted_s(:time) %></td>
       <td><%=link_to "Join", "/games/join?id=#{current_game.id}" %></td>
       <td><%=link_to "View", "/games/view" %></td>
     </tr>
