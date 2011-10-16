@@ -6,8 +6,9 @@ class GamesController < ApplicationController
   end
 
   def create
-    @user = User.
     @game = Game.new(params[:game])
+    @game.creator=current_user.name
+    @game.numplayers=1
     if @game.save
       flash[:success] = "Game Created!"
       redirect_to "/pages/home"
@@ -18,12 +19,23 @@ class GamesController < ApplicationController
   end
 
   def join
-     @title = "Home"
-     redirect_to "/pages/home"
+     @id = params[:id]
+     @game = Game.find(@id)
+     if @game.creator == current_user.name
+       flash[:error] = "You are already in this game!"
+       @title = "Home"
+       redirect_to "/pages/home"
+     else
+      flash[:success] = "You have joined the game"
+      @title = "Home"
+      @game.numplayers+=1
+      @game.save
+      redirect_to "/pages/home"
+     end
   end
 
   def view
-     redirect_to "/pages/home"
+     redirect_to "/pages/locations"
   end
 
   private
