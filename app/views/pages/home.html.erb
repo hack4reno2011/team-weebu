@@ -13,7 +13,7 @@
       <td><%=current_game.location %></td>
       <td><%=current_game.creator %></td>
       <td><%=current_game.datetime %></td>
-      <td><%=link_to "Join", "/games/join" %></td>
+      <td><%=link_to "Join #{current_game.id}", "/games/join?id=#{current_game.id}" %></td>
       <td><%=link_to "View", "/games/view" %></td>
     </tr>
   <% end %>
