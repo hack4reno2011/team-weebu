@@ -1,9 +1,9 @@
 BBall::Application.routes.draw do
-  get "users/new"
+  resources :users
+
+  match "users/new", :to => 'users#new'
 
   get "pages/home"
-
-  get "pages/register"
 
   get "pages/signin"
 
