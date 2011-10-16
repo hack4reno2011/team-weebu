@@ -1,2 +1,10 @@
 <h1>Pages#locations</h1>
+<% loc = Location.find(:all) %>
 
+<% loc.each do |curr_loc| %>
+<h2><%= curr_loc.name %></h2>
+<%= curr_loc.address %>
+<br>
+<% curr_loc.lat %>
+<% curr_loc.long %>
+<% end %>

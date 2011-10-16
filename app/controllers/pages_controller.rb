@@ -6,6 +6,7 @@ class PagesController < ApplicationController
 
   def locations
     @title = "Locations"
+    @location = Location.find(:all)
   end
 
   def view
