@@ -1,5 +1,6 @@
 class GamesController < ApplicationController
   before_filter :authenticate, :only => [:new, :join]
+
   def new
      @game = Game.new
      @title = "Create Game"
