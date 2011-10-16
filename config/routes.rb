@@ -5,6 +5,8 @@ BBall::Application.routes.draw do
   resources :users
 
   get "sessions/destroy"
+  match "games/join", :to=> 'games#join'
+  get "games/view"
 
   resources :sessions
   resources :games
@@ -13,9 +15,9 @@ BBall::Application.routes.draw do
 
   get "sessions/new"
 
-  match "games/join", :to=> 'games#join'
 
-  get "games/view"
+
+
 
   match "users/new", :to => 'users#new'
 
