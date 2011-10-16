@@ -7,25 +7,32 @@
     <![endif]-->
 
   <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+
   <%= stylesheet_link_tag 'custom', :media => 'screen' %>
   <%= csrf_meta_tags %>
   <%= yield(:head) %>
 </head>
-<body>
+<body >
 
     <div class="container">
-      <header>
-        <%= image_tag("logo.png", :alt => "Sample App", :class => "round") %>
-        <nav class="round">
-          <ul>
+    
+    <div style="padding: 20px; background-color:#ffffff;">
+      <div style="float: left; background-color:#ffffff;">
+        <a href="/pages/home" style="padding-left: 10px; padding-right: 10px;">Today</a> 
+        <a href="/pages/locations" style="padding-left: 10px; padding-right:10px;">Locations</a>
+        <a href="/games/new" style="padding-left:10px; padding-right:10px;">Create Game</a>
+      </div>
+        <div class="login" style="font-family: helvetica; ">
             <% if signed_in? %>
                 <%= link_to "Sign out", "/sessions/destroy"%>
             <% else %>
                 <%= link_to "Sign in", "/sessions/new" %>
             <% end %>
-            <a href="/users/new">Register</a>
-          </ul>
-        </nav>
+            <a href="/users/new" style="padding-right:40px; padding-left:20px; ">Register</a>
+        </div>
+    </div>
+      <header>
+        <%= image_tag("logo.png", :alt => "Sample App", :class => "round", :height => '200') %>
       </header>
       <section class="round">
         <table class="table">
@@ -38,9 +45,6 @@
             </td>
             <td class="links">
                 <ul class="round">
-                    <a href="/pages/home">Home</a> <br/>
-                    <a href="/pages/locations">Locations</a> <br/>
-                    <a href="/games/new">Create Game</a>
                 </ul>
             </td>
           </tr>
