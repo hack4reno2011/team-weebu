@@ -6,6 +6,7 @@ class GamesController < ApplicationController
   end
 
   def create
+    @user = User.
     @game = Game.new(params[:game])
     if @game.save
       flash[:success] = "Game Created!"
