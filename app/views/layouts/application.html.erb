@@ -6,8 +6,10 @@
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
   <%= stylesheet_link_tag 'custom', :media => 'screen' %>
   <%= csrf_meta_tags %>
+  <%= yield(:head) %>
 </head>
 <body>
 
