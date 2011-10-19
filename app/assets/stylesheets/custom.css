@@ -22,13 +22,26 @@ header img {
   padding: 1em;
 }
 
+.game_cell {
+  width: 100%;
+  display: table-cell;
+  margin: auto;
+  height: 50px;
+  margin: 20px;
+  vertical-align: middle;
+  background-color: #ddd;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
 tr {
   margin 5px;
   height: 50px;
-  background-color: #ddd;
-  border-radius: 3px;
-  -web-kit-border-radius: 3px;
+  background-color: blue; /* #ddd; */
+  -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
+  border-radius: 3px;
 }
 
 .tr_row {
@@ -96,6 +109,10 @@ table {
   border-collapse: collapse;
 
     width: 100%;
+
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
 }
 
 .round {

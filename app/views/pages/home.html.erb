@@ -1,39 +1,19 @@
 <h1>Today's Games</h1>
 
-<<<<<<< HEAD
-<table style="padding:10px; width:700px; margin:auto; ">
-<!--
-  <tr style="width:700; ">
-    <th>Num Players</th>
-    <th>Location</th>
-    <th>Creator</th>
-    <th>Date/Time</th>
-=======
-<table>
-  <tr class="table_header">
-    <th class="table_header_entry">Num Players</th>
-    <th class="table_header_entry">Location</th>
-    <th class="table_header_entry">Creator</th>
-    <th class="table_header_entry">Date/Time</th>
->>>>>>> 5adab16b4d6c8c3466e3ef2ebba12222b7436110
-  </tr>
-  -->
-  <% @games.each do |current_game| %>
-<<<<<<< HEAD
+<div style="text-align: center; width:700px; margin:auto;">
   <hr />
-    <tr >
-      <div>
-=======
-    <tr class="table_row">
->>>>>>> 5adab16b4d6c8c3466e3ef2ebba12222b7436110
-      <td><%=current_game.numplayers %></td>
-      <td><%=current_game.location %></td>
-      <td><%=current_game.creator %></td>
-      <td><%=current_game.datetime.to_formatted_s(:time) %></td>
-      <td><%=link_to "Join", "/games/join?id=#{current_game.id}" %></td>
-      <td><%=link_to "View", "/games/view" %></td>
+  <% @games.each do |current_game| %>
+    <div style="width:100%; display: table; margin-top:20px;">
+      <div class="game_cell"> 
+      <span style="width:100px; float:left;"><%= current_game.numplayers %></span>
+      <span style="width:200px; float:left;"><%= current_game.location %></span>
+      <span style="width:100px; float:left;"><%= current_game.creator %></span>
+      <span style="width:100px; float:left;"><%= current_game.datetime.to_formatted_s(:time) %></span>
+      <span style="width:100px; float:left;"><%= link_to "Join", "/games/join?id=#{current_game.id}" %></span>
+      <span style="width:100px; float:left;"><%= link_to "View", "/games/view" %></span>
+      <br>
       </div>
-    </tr>
+      </div>
   <% end %>
-</table>
+</div>
 

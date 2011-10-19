@@ -6,7 +6,9 @@ gem 'rails', '3.1.1.rc2'
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
+#gem 'heroku'
 
+#gem 'pg'
 
 # Gems used only for assets and not required
 # in production environments by default.
